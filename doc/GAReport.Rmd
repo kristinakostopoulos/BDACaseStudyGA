@@ -77,8 +77,8 @@ In this case study, you will have to answer five questions which will help the w
 
 ```{r, echo=FALSE, message=FALSE, prompt=FALSE, results='asis'}
 pageviews<- group_by(gadata,source)%>%summarise(pageviews=sum(pageviews))
-t2 <- gvisTable(pageviews, allowHTML = TRUE, page = 'disable'))
-print(t2,'chart')`
+t2 <- gvisTable(pageviews, formats=NULL,allowHTML = TRUE, page = 'disable')
+print(t2,'chart')
 ```
 
 2. What are the exit rates for the pages with the most number of exits? How would you change the content of the page to reduce exit rate? 
