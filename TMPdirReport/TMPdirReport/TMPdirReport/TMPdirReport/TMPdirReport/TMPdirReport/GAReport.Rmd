@@ -77,7 +77,7 @@ In this case study, you will have to answer five questions which will help the w
 
 ```{r, echo=FALSE, message=FALSE, prompt=FALSE, results='asis'}
 pageviews<- group_by(gadata,source)%>%summarise(pageviews=sum(pageviews))
-t2 <- gvisTable(pageviews, allowHTML = TRUE, page = 'disable'))
+t2 <- gvisTable(pageviews, options = list(showRowNumber = FALSE, width = 800, height = min(400,27*(nrow(gadata) + 1)), allowHTML = TRUE, page = 'disable'))
 print(t2,'chart')`
 ```
 

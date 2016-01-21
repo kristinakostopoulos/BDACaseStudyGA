@@ -76,8 +76,8 @@ In this case study, you will have to answer five questions which will help the w
 1. What are the pages with more visits? Are them the same when medium is not 'cpc'? Can you make a recommendation on the most popular pages?
 
 ```{r, echo=FALSE, message=FALSE, prompt=FALSE, results='asis'}
-pageviews<- group_by(gadata,source)%>%summarise(pageviews=sum(pageviews))
-t2 <- gvisTable(pageviews, allowHTML = TRUE, page = 'disable'))
+
+t2 <- gvisTable(pageviews)
 print(t2,'chart')`
 ```
 
